@@ -5,4 +5,4 @@ target/
 jna.jar
 kotlin-test-1.8.10.jar
 bindings-simple/bindings
-bidnings-vectors/bindings
+bindings-vectors/bindings
