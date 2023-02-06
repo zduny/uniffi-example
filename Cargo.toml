@@ -1,5 +1,9 @@
 [workspace]
 members = [
+    "simple",
     "vectors",
-    "bindings"
+    "bindings-simple",
+    "bindings-vectors",
+    "doc-extractor",
+    "doc-extractor-macros",
 ]
