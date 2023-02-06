@@ -1,0 +1,18 @@
+[package]
+name = "bindings-simple"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+name = "bindings_simple"
+
+[dependencies]
+simple = { path = "../simple" }
+uniffi = { path = "../../uniffi-rs/uniffi" }
+
+[build-dependencies]
+uniffi = { path = "../../uniffi-rs/uniffi", features = ["build"] }
+
+[dev-dependencies]
+uniffi = { path = "../../uniffi-rs/uniffi", features = ["bindgen-tests"] }
