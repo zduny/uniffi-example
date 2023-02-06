@@ -1,3 +1,8 @@
+.DS_Store
 debug/
 target/
 **/*.rs.bk
+jna.jar
+kotlin-test-1.8.10.jar
+bindings-simple/bindings
+bidnings-vectors/bindings
