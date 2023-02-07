@@ -3,6 +3,6 @@ debug/
 target/
 **/*.rs.bk
 jna.jar
-kotlin-test-1.8.10.jar
+kotlin-test.jar
 bindings-simple/bindings
 bindings-vectors/bindings
