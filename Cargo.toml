@@ -4,6 +4,8 @@ members = [
     "vectors",
     "bindings-simple",
     "bindings-vectors",
-    "doc-extractor",
-    "doc-extractor-macros",
+    "uniffi-bindgen",
 ]
+
+[workspace.dependencies]
+uniffi = { git = "https://github.com/zduny/uniffi-rs", rev = "f1549a0" }
