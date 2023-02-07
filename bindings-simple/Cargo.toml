@@ -9,10 +9,10 @@ name = "bindings_simple"
 
 [dependencies]
 simple = { path = "../simple" }
-uniffi = { path = "../../uniffi-rs/uniffi" }
+uniffi = { workspace = true }
 
 [build-dependencies]
-uniffi = { path = "../../uniffi-rs/uniffi", features = ["build"] }
+uniffi = { workspace = true, features = ["build"] }
 
 [dev-dependencies]
-uniffi = { path = "../../uniffi-rs/uniffi", features = ["bindgen-tests"] }
+uniffi = { workspace = true, features = ["bindgen-tests"] }
