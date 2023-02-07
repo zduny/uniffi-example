@@ -21,8 +21,8 @@ mod tests {
 
     #[test]
     fn test_hello() {
-        assert_eq!(hello(
-            Person {
+        assert_eq!(
+            hello(Person {
                 name: "Daniel".to_string()
             }),
             "Hello Daniel!"
