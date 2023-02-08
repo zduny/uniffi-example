@@ -8,4 +8,5 @@ members = [
 ]
 
 [workspace.dependencies]
-uniffi = { git = "https://github.com/zduny/uniffi-rs", rev = "f1549a0" }
+uniffi = { git = "https://github.com/zduny/uniffi-rs", rev = "55ba91c" }
+# uniffi = { path = "../uniffi-rs/uniffi" }
