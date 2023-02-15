@@ -14,7 +14,7 @@ do
    for language in "${LANGUAGES[@]}"
    do
       cargo run -p uniffi-bindgen generate src/$project.udl --language $language \
-      --docs --out-dir=$OUTPUT_FILE_PATH/$language --config=uniffi.toml 
+      --out-dir=$OUTPUT_FILE_PATH/$language --config=uniffi.toml 
    done
 
    cd ..
