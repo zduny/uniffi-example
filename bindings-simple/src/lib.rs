@@ -1,4 +1,4 @@
-use std::{sync::Mutex, fmt::Display};
+use std::{fmt::Display, sync::Mutex};
 
 /// Pet with a name.
 pub struct Pet {
@@ -25,7 +25,9 @@ pub struct Person {
 impl Person {
     /// Create new person with [name].
     pub fn new(name: String) -> Self {
-        Person { inner: Mutex::new(simple::Person::new(&name)) }
+        Person {
+            inner: Mutex::new(simple::Person::new(&name)),
+        }
     }
 
     /// Set person name.
@@ -38,7 +40,6 @@ impl Person {
         self.inner.lock().unwrap().get_name().to_string()
     }
 }
-
 
 /// Add two integers together.
 pub fn add(left: u64, right: u64) -> u64 {

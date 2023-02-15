@@ -19,7 +19,9 @@ pub struct Person {
 impl Person {
     /// Create new person with [name].
     pub fn new(name: &str) -> Self {
-        Person { name: name.to_string() }
+        Person {
+            name: name.to_string(),
+        }
     }
 
     /// Set person name.
