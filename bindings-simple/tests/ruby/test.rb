@@ -1,12 +1,11 @@
-require "test/unit"
-require "simple"
- 
-class TestAdd < Test::Unit::TestCase
-  def test_hello
-    assert_equal(Simple.hello(Simple::Person.new("Daniel")), "Hello Daniel!")
-  end
+# frozen_string_literal: true
 
-  def test_add
-    assert_equal(5, Simple.add(2, 3))
-  end
-end
+require 'test/unit'
+require 'simple'
+
+include Test::Unit::Assertions
+
+assert_equal Simple.hello(Simple::Pet.new("Tom")), "Hello Tom!"
+assert_equal Simple::Person.new("Daniel").get_name(), "Daniel"
+assert_equal Simple.add(2, 4), 6
+assert_equal Simple.test_enum_to_string(Simple::TestEnum::A), "A"

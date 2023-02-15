@@ -1,8 +1,21 @@
 namespace simple {
-  string hello(Person person);
+  string hello(Pet pet);
   u64 add(u64 a, u64 b);
+  string test_enum_to_string(TestEnum test_enum);
 };
 
-dictionary Person {
+dictionary Pet {
   string name;
+};
+
+enum TestEnum {
+  "A",
+  "B",
+  "C",
+};
+
+interface Person {
+    constructor(string name);
+    void set_name(string name);
+    string get_name();
 };

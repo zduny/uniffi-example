@@ -1,13 +1,36 @@
+/// Pet with a name.
+pub struct Pet {
+    /// Pet's name.
+    pub name: String,
+}
+
+/// Create hello message to a `pet`.
+pub fn hello(pet: Pet) -> String {
+    let name = pet.name;
+    format!("Hello {name}!")
+}
+
 /// Person with a name.
 pub struct Person {
     /// Person's name.
     pub name: String,
 }
 
-/// Create hello message to a `person`.
-pub fn hello(person: Person) -> String {
-    let name = person.name;
-    format!("Hello {name}!")
+impl Person {
+    /// Create new person with [name].
+    pub fn new(name: &str) -> Self {
+        Person { name: name.to_string() }
+    }
+
+    /// Set person name.
+    pub fn set_name(&mut self, name: &str) {
+        self.name = name.to_string();
+    }
+
+    /// Get person's name.
+    pub fn get_name(&self) -> &str {
+        &self.name
+    }
 }
 
 /// Add two integers together.
@@ -22,11 +45,23 @@ mod tests {
     #[test]
     fn test_hello() {
         assert_eq!(
-            hello(Person {
-                name: "Daniel".to_string()
+            hello(Pet {
+                name: "Milo".to_string()
             }),
-            "Hello Daniel!"
+            "Hello Milo!"
         );
+    }
+
+    #[test]
+    fn test_get_name() {
+        assert_eq!(Person::new("Daniel").get_name(), "Daniel");
+    }
+
+    #[test]
+    fn test_set_name() {
+        let mut person = Person::new("Daniel");
+        person.set_name("Tom");
+        assert_eq!(person.get_name(), "Tom");
     }
 
     #[test]
