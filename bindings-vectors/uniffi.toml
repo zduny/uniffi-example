@@ -1,3 +1,6 @@
+[bindings]
+doc_comments = true
+
 [bindings.swift]
 generate_module_map = true
 cdylib_name = "bindings-vectors"
