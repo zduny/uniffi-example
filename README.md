@@ -4,9 +4,9 @@ Project demonstrating use of https://github.com/mozilla/uniffi-rs.
 
 This project is a workspace (but it doesn't have to be, it's that way simply to organize multiple projects), containing the following members:
 
-- [simple](https://github.com/zduny/uniffi-example/tree/main/simple) - library we're trying to generate bidings to, 
+- [simple](https://github.com/zduny/uniffi-example/tree/main/simple) - library we're trying to generate bindings to, 
 it could be an external library, outside of this workspace, put here inside only for convenience.
-- [vectors](https://github.com/zduny/uniffi-example/tree/main/vectors) - another, slighlty more complicated library we're trying to generate bidings to, 
+- [vectors](https://github.com/zduny/uniffi-example/tree/main/vectors) - another, slightly more complicated library we're trying to generate bindings to, 
 it could be an external library, outside of this workspace, put here inside only for convenience.
 - [bindings-simple](https://github.com/zduny/uniffi-example/tree/main/bindings-simple) - intermediary layer wrapping 
 [simple](https://github.com/zduny/uniffi-example/tree/main/simple) library, used as a base for generated bindings,
