@@ -1,2 +1,26 @@
 namespace vectors {
+    ComparisonResult compare_length(Vector left, Vector right);
+};
+
+interface Vector {
+    [Name=scalar]
+    constructor(f64 s);
+
+    [Name=vec2]
+    constructor(f64 x, f64 y);
+
+    [Name=vec3]
+    constructor(f64 x, f64 y, f64 z);
+
+    [Name=vec4]
+    constructor(f64 x, f64 y, f64 z, f64 w);
+
+    f64 norm();
+};
+
+enum ComparisonResult {
+    "Equal",
+    "Close",
+    "LeftGreater",
+    "RightGreater"
 };

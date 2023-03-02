@@ -1,3 +1,5 @@
+use vectors::Vector2;
+
 /// Pet with a name.
 pub struct Pet {
     /// Pet's name.
@@ -14,13 +16,17 @@ pub fn hello(pet: Pet) -> String {
 pub struct Person {
     /// Person's name.
     pub name: String,
+
+    /// Person's location.
+    pub location: Vector2,
 }
 
 impl Person {
-    /// Create new person with [name].
-    pub fn new(name: &str) -> Self {
+    /// Create new person with [name] and [location].
+    pub fn new(name: &str, location: Vector2) -> Self {
         Person {
             name: name.to_string(),
+            location,
         }
     }
 
@@ -32,6 +38,11 @@ impl Person {
     /// Get person's name.
     pub fn get_name(&self) -> &str {
         &self.name
+    }
+
+    /// Get person's location.
+    pub fn get_location(&self) -> Vector2 {
+        self.location
     }
 }
 
@@ -56,12 +67,23 @@ mod tests {
 
     #[test]
     fn test_get_name() {
-        assert_eq!(Person::new("Daniel").get_name(), "Daniel");
+        assert_eq!(
+            Person::new("Daniel", Vector2 { x: 0.0, y: 0.0 }).get_name(),
+            "Daniel"
+        );
+    }
+
+    #[test]
+    fn test_location() {
+        assert_eq!(
+            Person::new("Daniel", Vector2 { x: 0.0, y: 0.0 }).get_location(),
+            Vector2 { x: 0.0, y: 0.0 }
+        );
     }
 
     #[test]
     fn test_set_name() {
-        let mut person = Person::new("Daniel");
+        let mut person = Person::new("Daniel", Vector2 { x: 0.0, y: 0.0 });
         person.set_name("Tom");
         assert_eq!(person.get_name(), "Tom");
     }

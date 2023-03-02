@@ -9,6 +9,7 @@ pub trait Vector {
 pub struct Scalar(pub f64);
 
 impl Vector for Scalar {
+    /// Vector's length.
     fn norm(&self) -> f64 {
         self.0
     }
@@ -71,7 +72,7 @@ impl Vector for Vector4 {
     }
 }
 
-/// Result of [compare_length] function.
+/// Result of comparison.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum ComparisonResult {
     /// Vectors are perfectly equal.
@@ -89,6 +90,7 @@ pub enum ComparisonResult {
 
 pub const EPSILON: f64 = 0.00001;
 
+/// Compare vectors lengths.
 pub fn compare_length<A, B>(left: A, right: B) -> ComparisonResult
 where
     A: Vector,
