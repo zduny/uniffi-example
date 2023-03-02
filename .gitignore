@@ -6,4 +6,5 @@ target/
 jna.jar
 kotlin-test.jar
 bindings-simple/bindings
+bindings-simple/simple.udl
 bindings-vectors/bindings
