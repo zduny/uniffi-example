@@ -1,0 +1,5 @@
+namespace simple {
+  string hello(Pet pet);
+  u64 add(u64 a, u64 b);
+  string test_enum_to_string(TestEnum test_enum);
+};

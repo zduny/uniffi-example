@@ -1,0 +1,5 @@
+interface Person {
+  constructor(string name);
+  void set_name(string name);
+  string get_name();
+};

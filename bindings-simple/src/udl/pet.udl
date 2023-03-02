@@ -1,0 +1,3 @@
+dictionary Pet {
+  string name;
+};

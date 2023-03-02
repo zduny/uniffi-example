@@ -1,19 +1,17 @@
-[ExternalInterface="bindings_vectors"]
-typedef extern Vector;
-
 namespace simple {
   string hello(Pet pet);
   u64 add(u64 a, u64 b);
   string test_enum_to_string(TestEnum test_enum);
 };
 
-[Error]
-enum SimpleError {
-  "WrongDimensions",
-};
-
 dictionary Pet {
   string name;
+};
+
+interface Person {
+  constructor(string name);
+  void set_name(string name);
+  string get_name();
 };
 
 enum TestEnum {
@@ -22,10 +20,3 @@ enum TestEnum {
   "C",
 };
 
-interface Person {
-  [Throws=SimpleError]
-  constructor(string name, Vector location);
-  void set_name(string name);
-  string get_name();
-  Vector get_location();
-};
