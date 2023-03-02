@@ -7,9 +7,16 @@ edition = "2021"
 crate-type = ["lib", "cdylib"]
 name = "bindings_simple"
 
+[package.metadata.uniffi.testing]
+external-crates = [
+    "bindings-vectors",
+]
+
 [dependencies]
+thiserror = "1.0.38"
 simple = { path = "../simple" }
 uniffi = { workspace = true }
+bindings-vectors = { path = "../bindings-vectors" }
 
 [build-dependencies]
 uniffi = { workspace = true, features = ["build"] }

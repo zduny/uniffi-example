@@ -9,6 +9,10 @@ cdylib_name = "bindings_simple"
 package_name = "org.zduny.simple"
 cdylib_name = "bindings_simple"
 
+[bindings.kotlin.external_packages]
+# Map the crate names from [External={name}] into Kotlin package names
+bindings_vectors = "org.zduny.vectors"
+
 [bindings.python]
 cdylib_name = "bindings_simple"
 

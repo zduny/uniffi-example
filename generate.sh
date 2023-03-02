@@ -5,7 +5,8 @@ export OUTPUT_FILE_PATH=bindings
 
 PROJECTS=('simple' 'vectors')
 
-LANGUAGES=('kotlin' 'swift' 'python' 'ruby')
+# temporarily disable Ruby and Python.
+LANGUAGES=('kotlin' 'swift')
 
 for project in "${PROJECTS[@]}"
 do

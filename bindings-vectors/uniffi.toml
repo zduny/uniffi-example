@@ -3,14 +3,14 @@ doc_comments = true
 
 [bindings.swift]
 generate_module_map = true
-cdylib_name = "bindings-vectors"
+cdylib_name = "bindings_vectors"
 
 [bindings.kotlin]
 package_name = "org.zduny.vectors"
-cdylib_name = "bindings-vectors"
+cdylib_name = "bindings_vectors"
 
 [bindings.python]
-cdylib_name = "bindings-vectors"
+cdylib_name = "bindings_vectors"
 
 [bindings.ruby]
-cdylib_name = "bindings-vectors"
+cdylib_name = "bindings_vectors"
